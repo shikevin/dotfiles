@@ -38,8 +38,12 @@ filetype plugin indent on    " required
 
 
 " Basic vimrc
-colorscheme Monokai
+" colorscheme Monokai
 
+syntax enable
+let g:solarized_termcolors = 256  " New line!!
+set background="dark"
+colorscheme solarized
 
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
