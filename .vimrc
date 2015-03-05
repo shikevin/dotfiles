@@ -111,5 +111,8 @@ function! GlobalSeach()
     lwindow
 endfunction
 
-""" mapping the function to leader-shift-e
 noremap <leader>F :call GlobalSeach() <CR>
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype css setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=4 sts=4 sw=4
+filetype indent on
