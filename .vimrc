@@ -16,8 +16,10 @@ Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vadimr/bclose.vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'davidhalter/jedi-vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'mileszs/ack.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -87,3 +89,27 @@ set expandtab
 cmap w!! w !sudo tee > /dev/null %
 set number
 set autoindent
+
+function! GlobalSeach()
+    let text = escape(input("what do you want to seach?: "),  '\\/')
+    if text == ""
+        echo "" | return
+    endif
+    let extension = escape(input("Wich extension? (* for all): "), '\\/')
+    if extension == ""
+        echo "" | return
+    endif
+
+    let search_command = ':lvim /\V' . text . '/gj ./**/*.' . extension
+    try
+        execute search_command 
+    catch
+        echo "Nothing found"
+        return
+    endtry
+
+    lwindow
+endfunction
+
+""" mapping the function to leader-shift-e
+noremap <leader>F :call GlobalSeach() <CR>
