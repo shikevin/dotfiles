@@ -9,10 +9,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vadimr/bclose.vim'
@@ -88,6 +89,7 @@ set expandtab
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 set number
+set relativenumber
 set autoindent
 
 function! GlobalSeach()
