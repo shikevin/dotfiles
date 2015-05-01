@@ -13,6 +13,7 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
+Plugin 'walm/jshint.vim'
 " Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
@@ -21,6 +22,7 @@ Plugin 'vadimr/bclose.vim'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mileszs/ack.vim'
+Plugin 'nvie/vim-flake8'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -88,8 +90,11 @@ set shiftwidth=4
 set expandtab
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+set cursorline
+" set cursorcolumn
+
 set number
-set relativenumber
+" set relativenumber
 set autoindent
 
 function! GlobalSeach()
