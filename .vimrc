@@ -18,11 +18,13 @@ Plugin 'walm/jshint.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vadimr/bclose.vim'
+Plugin 'scrooloose/syntastic'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mileszs/ack.vim'
 Plugin 'nvie/vim-flake8'
+Plugin 'lervag/vimtex'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -46,10 +48,15 @@ filetype plugin indent on    " required
 
 " Basic vimrc
 " colorscheme Monokai
+"
+" syntastic config
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 syntax enable
 let g:solarized_termcolors = 256  " New line!!
 set background="dark"
+set t_Co=256
 colorscheme solarized
 
 " Setup some default ignores
@@ -94,7 +101,7 @@ set cursorline
 " set cursorcolumn
 
 set number
-" set relativenumber
+set relativenumber
 set autoindent
 
 function! GlobalSeach()
@@ -122,4 +129,5 @@ noremap <leader>F :call GlobalSeach() <CR>
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=4 sts=4 sw=4
+autocmd Filetype cpp setlocal ts=4 sts=4 sw=4
 filetype indent on
