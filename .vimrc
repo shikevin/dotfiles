@@ -25,6 +25,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'mileszs/ack.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'lervag/vimtex'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -98,7 +99,7 @@ set expandtab
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 set cursorline
-" set cursorcolumn
+set cursorcolumn
 
 set number
 set relativenumber

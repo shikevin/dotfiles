@@ -4,4 +4,5 @@ vim requires vundle for plugin manager
 vim uses ACK for file search so brew install Ack
 
 tmux requires namespaces for copying so use
+    this is very useful
     ==> brew install reattach-to-user-namespace
