@@ -26,6 +26,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'lervag/vimtex'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'kchmck/vim-coffee-script'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -33,7 +34,6 @@ Plugin 'mustache/vim-mustache-handlebars'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -55,6 +55,7 @@ let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 syntax enable
+filetype plugin indent on    " required
 let g:solarized_termcolors = 256  " New line!!
 set background="dark"
 set t_Co=256
@@ -104,6 +105,7 @@ set cursorcolumn
 set number
 set relativenumber
 set autoindent
+set backspace=indent,eol,start " backspace over everything in insert mode
 
 function! GlobalSeach()
     let text = escape(input("what do you want to seach?: "),  '\\/')
@@ -129,6 +131,8 @@ endfunction
 noremap <leader>F :call GlobalSeach() <CR>
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
+autocmd Filetype html.handlebars setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=4 sts=4 sw=4
 autocmd Filetype cpp setlocal ts=4 sts=4 sw=4
+autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 filetype indent on
