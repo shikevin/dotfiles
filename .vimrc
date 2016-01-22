@@ -47,9 +47,11 @@ call vundle#end()            " required
 " Put your non-Plugin stuff after this line
 
 
+" linter/completion dependencies
+let coffee_linter = '/usr/local/bin/coffeelint'
+
 " Basic vimrc
 " colorscheme Monokai
-"
 " syntastic config
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
@@ -135,4 +137,5 @@ autocmd Filetype html.handlebars setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=4 sts=4 sw=4
 autocmd Filetype cpp setlocal ts=4 sts=4 sw=4
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
+autocmd Filetype scss setlocal ts=2 sts=2 sw=2
 filetype indent on
