@@ -94,6 +94,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 syntax on
 
+" THIS IS VERY IMPORTANT, NEW REGEX ENGINE IS SLOW AF
+set re=1
+
 set clipboard=unnamedplus,unnamed,autoselect
 set smartindent
 set tabstop=4
@@ -138,6 +141,6 @@ autocmd Filetype html setlocal ts=4 sts=4 sw=4
 autocmd Filetype cpp setlocal ts=4 sts=4 sw=4
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
-autocmd Filetype ruby setlocal re=1 ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 " autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 filetype indent on
