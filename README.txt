@@ -9,3 +9,6 @@ tmux requires namespaces for copying so use
 
 install coffee-linter
 npm install -g coffeelint
+
+if ruby is slow, read:
+    http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
