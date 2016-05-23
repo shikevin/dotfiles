@@ -12,3 +12,6 @@ npm install -g coffeelint
 
 if ruby is slow, read:
     http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
+
+copy paste using TMUX:
+https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/
