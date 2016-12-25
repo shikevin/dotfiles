@@ -27,6 +27,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'lervag/vimtex'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mxw/vim-jsx'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -97,7 +98,8 @@ syntax on
 " THIS IS VERY IMPORTANT, NEW REGEX ENGINE IS SLOW AF
 set re=1
 
-set clipboard=unnamedplus,unnamed,autoselect
+" set clipboard=unnamedplus,unnamed,autoselect
+set clipboard=unnamed
 set smartindent
 set tabstop=4
 set shiftwidth=4

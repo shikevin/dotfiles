@@ -1,5 +1,10 @@
+TODO: add CTags support in vim
+https://andrew.stwrt.ca/posts/vim-ctags/
+
 vim requires vundle for plugin manager
     ==> git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+:PluginInstall to install plugins
 
 vim uses ACK for file search so brew install Ack
 
