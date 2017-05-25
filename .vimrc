@@ -66,14 +66,20 @@ colorscheme solarized
 
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'dir':  'dist-*\|node_modules',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
 \}
+
+" OLD DIR IGNORE FOR CtrLP
+" \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
 
 " Use the nearest .git directory as the cwd
 " This makes a lot of sense if you are working on a project that is in
 " control. It also supports works with .svn, .hg, .bzr.
 let g:ctrlp_working_path_mode = 'r'
+
+" NERDTREE IGNORE DIRECTORIES"
+let g:NERDTreeIgnore=['\~$', 'dist-*']
 
 " Use a leader instead of the actual named binding
 nmap <leader>p :CtrlP<cr>
