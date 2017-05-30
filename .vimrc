@@ -28,6 +28,7 @@ Plugin 'lervag/vimtex'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-surround'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -56,6 +57,12 @@ let coffee_linter = '/usr/local/bin/coffeelint'
 " syntastic config
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
+" use the local version of eslint for linting
+if executable('node_modules/.bin/eslint')
+    let b:syntastic_javascript_eslint_exec = 'node_modules/.bin/eslint'
+endif
+let g:syntastic_javascript_checkers = ['eslint']
 
 syntax enable
 filetype plugin indent on    " required
