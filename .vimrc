@@ -60,7 +60,7 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " use the local version of eslint for linting
 if executable('node_modules/.bin/eslint')
-    let b:syntastic_javascript_eslint_exec = 'node_modules/.bin/eslint'
+    let g:syntastic_javascript_eslint_exec = 'node_modules/.bin/eslint'
 endif
 let g:syntastic_javascript_checkers = ['eslint']
 
