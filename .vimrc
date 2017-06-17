@@ -63,6 +63,7 @@ if executable('node_modules/.bin/eslint')
     let g:syntastic_javascript_eslint_exec = 'node_modules/.bin/eslint'
 endif
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_ruby_checkers = ['rubocop']
 
 syntax enable
 filetype plugin indent on    " required

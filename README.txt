@@ -23,3 +23,6 @@ https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/
 
 hop forward and backward using escape sequences in iterm2
 https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x
+
+BABEL-ESLINT for ES6
+https://stackoverflow.com/questions/20160921/syntastic-complaining-about-es6-module-syntax
