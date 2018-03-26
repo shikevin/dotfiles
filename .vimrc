@@ -19,6 +19,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vadimr/bclose.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'gcorne/vim-sass-lint'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -48,6 +49,8 @@ call vundle#end()            " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Ignore files from ctrlp
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 " linter/completion dependencies
 let coffee_linter = '/usr/local/bin/coffeelint'
@@ -57,6 +60,10 @@ let coffee_linter = '/usr/local/bin/coffeelint'
 " syntastic config
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
+" SASS
+let g:syntastic_sass_checkers=["sasslint"]
+let g:syntastic_scss_checkers=["sasslint"]
 
 " use the local version of eslint for linting
 if executable('node_modules/.bin/eslint')
@@ -153,10 +160,11 @@ noremap <leader>F :call GlobalSeach() <CR>
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype html.handlebars setlocal ts=2 sts=2 sw=2
-autocmd Filetype html setlocal ts=4 sts=4 sw=4
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype cpp setlocal ts=4 sts=4 sw=4
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
 " autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 filetype indent on
