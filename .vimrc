@@ -12,7 +12,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'pangloss/vim-javascript'
 Plugin 'walm/jshint.vim'
 Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
@@ -20,6 +19,8 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vadimr/bclose.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'gcorne/vim-sass-lint'
+Plugin 'yuezk/vim-js'
+Plugin 'maxmellon/vim-jsx-pretty'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -28,7 +29,6 @@ Plugin 'nvie/vim-flake8'
 Plugin 'lervag/vimtex'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-surround'
 
 " The following are examples of different formats supported.
@@ -157,7 +157,7 @@ function! GlobalSeach()
 endfunction
 
 noremap <leader>F :call GlobalSeach() <CR>
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype html.handlebars setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
@@ -167,4 +167,7 @@ autocmd Filetype scss setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 " autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+"
+" allow edit jsx tags inside js files
+let g:jsx_ext_required = 0
 filetype indent on
